@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <div class="main">
+          <section class="card__profile">
+            <div class="card__aside">
+              <div class="card__figure">
+                <img
+                  src="/images/image-jeremy.png"
+                  alt="avatar"
+                  class="card__avatar"
+                />
+              </div>
+              <div class="card__title">
+                <h2 class="card__subtitle">Report for</h2>
+                <h1>Jeremy Robson</h1>
+              </div>
+            </div>
+            <div class="card__body">
+              <nav class="nav" id="nav">
+                <ul class="nav__list">
+                  <li class="nav__item" id="nav_item">
+                    <a
+                      href="#"
+                      class="nav__link"
+                      id="nav_link"
+                      data-value="daily"
+                      >Daily</a
+                    >
+                  </li>
+                  <li class="nav__item" id="nav_item">
+                    <a
+                      href="#"
+                      class="nav__link active"
+                      id="nav_link"
+                      data-value="weekly"
+                      >Weekly</a
+                    >
+                  </li>
+                  <li class="nav__item" id="nav_item">
+                    <a
+                      href="#"
+                      class="nav__link"
+                      id="nav_link"
+                      id="nav_link"
+                      data-value="monthly"
+                      >Monthly</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+          <section class="card card__work">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-work.svg" alt="work-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="work"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="work_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="work_previous"></h2>
+              </div>
+            </div>
+          </section>
+          <section class="card card__play">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-play.svg" alt="play-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="play"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="play_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="play_previous"></h2>
+              </div>
+            </div>
+          </section>
+          <section class="card card__study">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-study.svg" alt="study-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="study"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="study_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="study_previous"></h2>
+              </div>
+            </div>
+          </section>
+          <section class="card card__exercise">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-exercise.svg" alt="exercise-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="exercise"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="exercise_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="exercise_previous"></h2>
+              </div>
+            </div>
+          </section>
+          <section class="card card__social">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-social.svg" alt="social-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="social"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="social_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="social_previous"></h2>
+              </div>
+            </div>
+          </section>
+          <section class="card card__self-care">
+            <div class="card__header">
+              <figure class="card__figure">
+                <img src="/images/icon-self-care.svg" alt="self-care-icon" />
+              </figure>
+            </div>
+            <div class="card__body">
+              <div class="card__body__title">
+                <h2 id="self_care"></h2>
+                <span><img src="/images/icon-ellipsis.svg" /></span>
+              </div>
+              <div class="card__body__main">
+                <h2 id="self_care_current"></h2>
+              </div>
+              <div class="card__body__footer">
+                <h2 id="self_care_previous"></h2>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script>
+      let myData = [];
+      const a = document.querySelectorAll(".nav__item a");
+
+      const fetchData = () => {
+        fetch("data.json")
+          .then((response) => response.json())
+          .then((data) => {
+            data.forEach((element) => {
+              // console.log(element.title);
+              const title = getID(element.title);
+              const timeframes = getListActive();
+              const timeframes_value = timeframes.dataset.value;
+              const current = element.timeframes[timeframes_value].current;
+              const previous = element.timeframes[timeframes_value].previous;
+              let previous_title;
+
+              switch (timeframes_value) {
+                case "daily":
+                  previous_title = "Yesterday";
+                  break;
+                case "weekly":
+                  previous_title = "Last Week";
+                  break;
+                case "monthly":
+                  previous_title = "Last Month";
+                  break;
+              }
+
+              document.getElementById(title).innerHTML = element.title;
+
+              document.getElementById(title + "_current").innerHTML =
+                current + "hrs";
+
+              document.getElementById(title + "_previous").innerHTML =
+                previous_title + " - " + previous + "hrs";
+
+              // document.getElementById(
+              //   getID(element.title + "_current")
+              // ).innerHTML = element.timeframes[timeframes_value].current;
+              // console.log(timeframes.dataset.value);
+
+              // console.log(element[timeframes]);
+            });
+          });
+      };
+
+      const getListActive = () => {
+        const a = document.querySelectorAll(".nav__item a");
+        for (let i = 0; i < a.length; i++) {
+          if (a[i].classList.contains("active")) {
+            return a[i];
+          }
+        }
+      };
+
+      const add_isActive = () => {
+        const a = document.querySelectorAll(".nav__item a");
+
+        for (let i = 0; i < a.length; i++) {
+          a[i].addEventListener("click", function () {
+            let current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            fetchData();
+          });
+        }
+      };
+
+      add_isActive();
+      fetchData();
+
+      const getID = (el) => {
+        const regex = /\s/;
+        let id = "";
+        if (regex.test(el)) {
+          return el.split(" ").join("_").toLowerCase();
+        } else return el.toLowerCase();
+      };
+
+      // console.log(displayData("Work"));
+    </script>
+  </body>
+</html>
