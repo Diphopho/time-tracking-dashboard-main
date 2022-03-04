@@ -79,7 +79,7 @@ main article .main .card__profile .card__aside .card__title {
   margin-top: 0;
 }
 
-main article .main .card__profile .card__aside .card__title h1 {
+main article .main .card__profile .card__aside .card__title h2 {
   margin: 0;
   font-size: 40px;
   font-weight: 300;
@@ -248,7 +248,7 @@ main article .main .card .card__body .card__body__footer h2 {
   main article .main .card__profile .card__aside .card__title {
     margin: 0;
   }
-  main article .main .card__profile .card__aside .card__title h1 {
+  main article .main .card__profile .card__aside .card__title h2 {
     font-size: 24px;
     font-weight: 300;
   }
